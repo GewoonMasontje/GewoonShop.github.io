@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GewoonMasontje | Home</title>
+  <style>
+    :root {
+      --main-orange: #ff6600;
+      --dark: #111;
+      --light: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #ffffff, #f4f4f4);
+      color: var(--dark);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: var(--main-orange);
+      padding: 20px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      animation: slideDown 0.6s ease-out;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    nav a:hover {
+      color: black;
+      text-shadow: 0 0 6px white;
+      transform: scale(1.08);
+    }
+
+    .container {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .hero {
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
+
+    .hero img {
+      width: 260px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .hero img:hover {
+      transform: scale(1.05);
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      color: var(--main-orange);
+      margin: 25px 0 15px;
+      animation: popIn 1.2s ease;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: var(--main-orange);
+      color: white;
+      padding: 14px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: 0.3s;
+      animation: popIn 1.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #cc5200;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px var(--main-orange);
+    }
+
+    section {
+      margin-top: 70px;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: slideUp 1s forwards;
+    }
+
+    section h2 {
+      font-size: 28px;
+      color: var(--main-orange);
+      margin-bottom: 15px;
+    }
+
+    section p {
+      font-size: 18px;
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      margin-top: 100px;
+      padding: 30px;
+      background-color: #f0f0f0;
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+    }
+
+    /* Animaties */
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .hero img {
+        width: 90%;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="overons.html">Over ons</a>
+      <a href="contact.html">Contact</a>
+      <a href="producties.html">Producties</a>
+      <a href="shop.html">Shop</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="hero">
+      <img src="logo.jpg" alt="Logo GewoonMasontje">
+      <h1>Welkom bij GewoonMasontje</h1>
+      <p>Hier draait alles om creativiteit, technologie en passie voor verhalen.</p>
+      <a class="cta-button" href="https://www.youtube.com/@GewoonMasontje" target="_blank">🎥 Bekijk ons YouTube-kanaal</a>
+    </div>
+
+    <section>
+      <h2>🎥 Wie zijn wij?</h2>
+      <p>
+        GewoonMasontje is gestart als een YouTube-kanaal, maar is uitgegroeid tot een creatief platform voor films, animaties, games en software.
+        Van Minecraft tot volledige filmscripts en van browsers tot Roblox-ervaringen — wij bouwen het allemaal zelf, met liefde voor het vak.
+      </p>
+      <p>
+        Wat ons uniek maakt? Alles wat je ziet is zelf geprogrammeerd, ontworpen of geschreven — met geen enkel stukje gekopieerd werk.
+      </p>
+    </section>
+
+    <section>
+      <h2>🛠️ Wat we maken</h2>
+      <p>
+        Onze producties zijn breed: we werken aan:
+        <ul>
+          <li>🎬 Films zoals "Ace, De Heldenhond"</li>
+          <li>🕹️ Roblox-games met huisdieren, gevechten en eierensystemen</li>
+          <li>🧮 Educatieve tools voor rekenen, tekenen en meer</li>
+          <li>🌐 Browsers, shops en webapps met unieke styling</li>
+        </ul>
+      </p>
+    </section>
+
+    <section>
+      <h2>🌍 Onze Missie</h2>
+      <p>
+        Wij willen jonge makers inspireren om zelf te leren programmeren, ontwerpen en creëren. Alles is mogelijk als je begint met een idee en de drive om te leren.
+      </p>
+      <p>
+        Van een lege pagina tot een game met miljoenen blokken — we laten zien dat jij dat ook kunt.
+      </p>
+    </section>
+
+    <section>
+      <h2>📢 Leuke Weetjes</h2>
+      <p>
+        Wist je dat onze grootste game meer dan <strong>1.000.000 regels code</strong> bevat? En dat we zelfs een eigen browser hebben gebouwd in Python? Met een startpagina, nieuws en zoekbalk!
+      </p>
+      <p>
+        Ook werken we aan interactieve webtools waarmee je live kunt tekenen, lessen geven of zelfs simulaties bouwen!
+      </p>
+    </section>
+
+    <section>
+      <h2>👥 Word onderdeel van onze community</h2>
+      <p>
+        We geloven in openheid. Of je nu een kijker bent of zelf wilt leren programmeren — sluit je aan bij onze community en groei met ons mee.
+      </p>
+      <p>
+        Bekijk ons YouTube-kanaal, reageer op video’s, of stuur je projectideeën. Wij luisteren altijd!
+      </p>
+    </section>
+
+    <section>
+      <h2>🛒 Binnenkort: De GewoonShop</h2>
+      <p>
+        We zijn bezig met een officiële shop vol unieke designs, posters en goodies van onze projecten. Alles in beperkte oplage.
+        Stay tuned!
+      </p>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 GewoonMasontje. Gebouwd met passie, plezier en Python.
+  </footer>
+
+</body>
+</html>
